@@ -1,5 +1,9 @@
 class StringMock
-	def self.add_string_with_empty(input)
+	def self.add(input)
+		return 0 if input.empty?
+
+		return input.to_i if input.length == 1
+
 		return 1 if input == '1'
 
 		return 6 if input == '1,5'
