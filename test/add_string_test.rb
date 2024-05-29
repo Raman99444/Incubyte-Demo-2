@@ -22,4 +22,8 @@ class AddStringTest < ActiveSupport::TestCase
 	test 'should return the sum of the number even the given string contain new line char' do
 		assert_equal 6, StringMock.add('1\n2,3')
 	end
+
+	test 'should return the correct value with ;' do
+		assert_equal 3, StringMock.add('//;\n1;2')
+	end
 end
