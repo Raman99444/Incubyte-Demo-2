@@ -18,4 +18,8 @@ class AddStringTest < ActiveSupport::TestCase
 	test 'should throw the error if the given number was negative' do
 		assert_equal "negative numbers not allowed -10", StringMock.add('-10')
 	end
+
+	test 'should return the sum of the number even the given string contain new line char' do
+		assert_equal 6, StringMock.add('1\n2,3')
+	end
 end
